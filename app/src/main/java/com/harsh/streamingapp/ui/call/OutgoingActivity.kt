@@ -22,6 +22,7 @@ import com.harsh.streamingapp.models.Notification
 import com.harsh.streamingapp.models.NotificationData
 import com.harsh.streamingapp.models.User
 import com.harsh.streamingapp.network.ApiClient
+import com.harsh.streamingapp.ui.webrtc.LivestreamActivity
 import com.harsh.streamingapp.utils.Constants
 import com.sneva.easyprefs.EasyPrefs
 import jp.wasabeef.glide.transformations.BlurTransformation
@@ -157,12 +158,12 @@ class OutgoingActivity : AppCompatActivity() {
             val intent: Intent = if (meetingType == "video") {
                 Intent(
                     this@OutgoingActivity,
-                    CallActivity::class.java
+                    LivestreamActivity::class.java
                 )
             } else {
                 Intent(
                     this@OutgoingActivity,
-                    CallActivity::class.java
+                    LivestreamActivity::class.java
                 )
             }
             intent.putExtra(Constants.REMOTE_MSG_MEETING_ROOM, meetingRoom)
