@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/discover"
+        android:icon="@drawable/discover"
+        android:title="Discover" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search" />
+    <item
+        android:id="@+id/li"
+        android:icon="@drawable/video"
+        android:title="" />
+    <item
+        android:id="@+id/matches"
+        android:icon="@drawable/heart"
+        android:title="Matches" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+</menu>

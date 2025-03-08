@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".ui.call.IncomingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_gl"
+        android:id="@+id/bg_profile"
+        android:foreground="#4B070402"
+        android:scaleType="centerCrop" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sen_semibold"
+        android:textColor="@color/white"
+        android:id="@+id/heading"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:text="Outgoing Call" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sen_bold"
+        android:textColor="@color/white"
+        android:id="@+id/name"
+        android:layout_below="@id/heading"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="XXXXY YYYY ZZZZZ" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="170dp"
+        android:id="@+id/profile"
+        android:layout_below="@id/name"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/img_gl"
+        android:layout_centerHorizontal="true"
+        android:layout_height="170dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#12CF00"
+        app:fabCustomSize="70dp"
+        android:id="@+id/answer"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:tint="@color/white"
+        android:src="@drawable/answer"
+        style="@style/Widget.MaterialComponents.FloatingActionButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/reject"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#FF5151"
+        app:fabCustomSize="70dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:tint="@color/white"
+        android:src="@drawable/times"
+        style="@style/Widget.MaterialComponents.FloatingActionButton" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="260dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="42sp"
+        android:fontFamily="@font/alice"
+        android:layout_marginTop="-30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:textColor="@color/high_emphasis" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are more than 802.5 crores people’s in this world"
+        android:textSize="16sp"
+        android:fontFamily="@font/sen"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="15dp"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/bg_rounded_white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/high_emphasis" />
+
+</RelativeLayout>

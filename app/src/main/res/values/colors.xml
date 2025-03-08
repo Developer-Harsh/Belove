@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="high_emphasis">#140A06</color>
+    <color name="low_emphasis">#472D23</color>
+    <color name="drag_handler">#DBDBDB</color>
+    <color name="pink_grad1">#FF3485</color>
+    <color name="pink_grad3">#FF6C56</color>
+    <color name="pink_grad2">#FF3434</color>
+    <color name="btn_second">#F4F4F4</color>
+    <color name="unselected_text">#7C726E</color>
+    <color name="dark_bg">#070402</color>
+</resources>

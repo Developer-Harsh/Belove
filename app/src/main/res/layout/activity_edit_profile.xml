@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".ui.profile.EditProfileActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:theme="@style/MediumFont"
+        app:tabBackground="@android:color/transparent"
+        app:tabIndicatorColor="@color/white"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#66FFFFFF">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/tabs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/img_gl" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:hint="Full Name"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/dark_edittext"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/dark_edittext"
+        app:placeholderText="john@xyz"
+        app:startIconDrawable="@drawable/profile"
+        app:startIconTint="@color/dark_edittext">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/dark_edittext" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="15dp"
+        android:hint="Email Address"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/dark_edittext"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/dark_edittext"
+        app:placeholderText="john@xyz"
+        app:startIconDrawable="@drawable/envelope"
+        app:startIconTint="@color/dark_edittext">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/dark_edittext" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="15dp"
+        android:hint="Location"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/dark_edittext"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/dark_edittext"
+        app:placeholderText="john@xyz"
+        app:startIconDrawable="@drawable/location"
+        app:startIconTint="@color/dark_edittext">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/dark_edittext" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sen_medium"
+        android:text="Save Profile"
+        android:textColor="@color/high_emphasis"
+        android:textSize="16sp"
+        app:backgroundTint="@color/white" />
+
+</RelativeLayout>

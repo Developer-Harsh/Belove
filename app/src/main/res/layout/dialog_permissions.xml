@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="30dp"
+    app:strokeWidth="0dp"
+    android:layout_marginHorizontal="40dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We need some permissions"
+            android:textSize="26sp"
+            android:textColor="@color/high_emphasis"
+            android:fontFamily="@font/sen_semibold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To use belove app, you need to allow some permissions to get started, these permissions are needed for livestreaming and call support."
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/low_emphasis"
+            android:fontFamily="@font/sen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="10dp"
+            android:text="Allow Permissions"
+            android:paddingVertical="15dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/sen_medium"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/high_emphasis" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cornerRadius="10dp"
+            android:text="Disagree, to give permission"
+            android:paddingVertical="15dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/sen_medium"
+            android:textColor="@color/high_emphasis"
+            app:backgroundTint="@color/btn_second" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

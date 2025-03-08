@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragments"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_centerHorizontal="true"
+        app:dividerColor="#26FFFFFF" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        android:theme="@style/BottomNav"
+        android:paddingVertical="15dp"
+        android:clipToPadding="false"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        app:itemIconTint="@color/bottom_nav_icon_tint"
+        android:background="@android:color/transparent"
+        app:menu="@menu/bottom_navigation">
+
+        <ImageView
+            android:id="@+id/live"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="20dp"
+            android:background="@drawable/bg_bottom_nav_center"
+            android:tint="@color/white"
+            android:layout_gravity="center"
+            android:src="@drawable/video" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.auth.LoginActivity">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Welcome to Belove"
+        android:textSize="26sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/high_emphasis"
+        android:fontFamily="@font/sen_semibold" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading"
+        android:layout_alignParentStart="true"
+        android:text="Stay close to the ones who matter. Stream, connect, and share moments with love and care."
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/low_emphasis"
+        android:fontFamily="@font/sen" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:hintTextColor="@color/edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="john@xyz"
+        app:startIconDrawable="@drawable/envelope"
+        app:startIconTint="@color/edittext_color"
+        app:boxStrokeColor="@color/edittext_color"
+        android:hint="Email Address"
+        android:layout_below="@id/description"
+        android:layout_marginHorizontal="40dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:textColor="@color/edittext_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:hintTextColor="@color/edittext_color"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="******"
+        android:hint="Password"
+        app:startIconDrawable="@drawable/lock"
+        app:startIconTint="@color/edittext_color"
+        app:boxStrokeColor="@color/edittext_color"
+        android:layout_below="@id/email"
+        android:layout_marginHorizontal="40dp"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:textColor="@color/edittext_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_below="@id/password"
+        android:textColor="@color/high_emphasis" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
+        app:cornerRadius="10dp"
+        android:text="Sign in"
+        android:paddingVertical="15dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sen_medium"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/high_emphasis"
+        android:layout_below="@id/forgot" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doesn’t have an Account? Register"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_below="@id/signin"
+        android:textColor="@color/high_emphasis" />
+
+    <TextView
+        android:id="@+id/policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By proceeding with the app, you agree to our Terms &amp; Conditions and Privacy Policy."
+        android:textSize="14sp"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/high_emphasis" />
+
+</RelativeLayout>

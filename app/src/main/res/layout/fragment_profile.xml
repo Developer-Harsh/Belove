@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:theme="@style/MediumFont"
+            app:tabTextColor="#66FFFFFF"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            android:background="@android:color/transparent"
+            app:tabBackground="@android:color/transparent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/profile"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tabs"
+            android:src="@drawable/img_gl" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:text="Rosy Albert"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="40dp"
+            android:layout_below="@id/profile"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sen_medium" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Delhi • 2 Km away"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/name"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableTint="#99FFFFFF"
+            android:drawableStart="@drawable/location"
+            android:textColor="#99FFFFFF"
+            android:fontFamily="@font/sen_medium" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:text="I’m an introvert, idk what to say or do, i love to hang out with others but don’t know how to say..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/location"
+            android:layout_marginTop="15dp"
+            android:textColor="#66FFFFFF"
+            android:fontFamily="@font/sen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/high_emphasis"
+            android:text="Edit Profile"
+            android:textSize="16sp"
+            app:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/about"
+            android:fontFamily="@font/sen_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/edit"
+            android:paddingBottom="200dp"
+            android:clipToPadding="false"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Options"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sen" />
+
+            <LinearLayout
+                android:id="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="50dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_options"
+                android:paddingVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sen_medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:src="@drawable/chevron_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="50dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_options"
+                android:paddingVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Conditions"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sen_medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:src="@drawable/chevron_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_options"
+                android:paddingVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Log out?"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sen_medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:src="@drawable/chevron_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

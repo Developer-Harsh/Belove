@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/profile"
+        android:src="@drawable/img_gl" />
+
+    <LinearLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Rosy Albert"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sen_medium" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Delhi • 2 Km away"
+            android:textSize="14sp"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableTint="#99FFFFFF"
+            android:drawableStart="@drawable/location"
+            android:textColor="#99FFFFFF"
+            android:fontFamily="@font/sen_medium" />
+
+    </LinearLayout>
+
+</LinearLayout>

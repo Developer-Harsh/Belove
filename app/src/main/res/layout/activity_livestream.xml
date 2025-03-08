@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_bg"
+    tools:context=".ui.webrtc.LivestreamActivity">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/close"
+            android:padding="15dp"
+            android:backgroundTint="#2FFFFFFF"
+            android:background="@drawable/bg_icons"
+            android:src="@drawable/times"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Livestream"
+            android:layout_marginHorizontal="15dp"
+            android:fontFamily="@font/sen_medium"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/muteAudio"
+                android:padding="13dp"
+                android:src="@drawable/microphone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/switchCamera"
+                android:padding="13dp"
+                android:src="@drawable/camera_change"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/videoHide"
+                android:padding="13dp"
+                android:src="@drawable/video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="30dp"
+        android:layout_below="@id/top"
+        android:layout_above="@id/messageBox"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/dark_bg"
+        app:strokeWidth="0dp">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/messageBox"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/messages" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone"
+        android:background="@drawable/bottom_fade_bg" />
+
+    <LinearLayout
+        android:id="@+id/startLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@id/messageBox"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:text="Start livestreaming?"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sen_bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/high_emphasis"
+            android:text="Yeah!"
+            android:textSize="16sp"
+            app:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/about"
+            android:fontFamily="@font/sen_medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_searchbar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/messageBox"
+        android:padding="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingHorizontal="15dp"
+            android:textColorHint="@color/white"
+            android:hint="Send a message..."
+            android:fontFamily="@font/sen"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:src="@drawable/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

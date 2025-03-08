@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.SearchFragment">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="none"
+        android:maxLines="1"
+        android:inputType="text"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textColorHint="#66FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sen"
+        android:background="@drawable/bg_searchbar"
+        android:hint="Search streams..." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:clipToPadding="false"
+        android:paddingBottom="500dp"
+        android:id="@+id/list" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/bottom_fade_bg" />
+
+</RelativeLayout>

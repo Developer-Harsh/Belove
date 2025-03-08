@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ForyouFragment">
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img_gl" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/bottom_fade_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Delhi • 2 Km away"
+            android:textSize="14sp"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:drawableTint="@color/white"
+            android:drawableStart="@drawable/location"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sen_medium" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:text="Reniel Albert, 18"
+            android:textSize="24sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sen_bold" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:text="I’m an introvert, idk what to say or do, i love to hang out with others but don’t know how to say..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:layout_marginTop="15dp"
+            android:textColor="#66FFFFFF"
+            android:fontFamily="@font/sen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/next"
+                android:padding="20dp"
+                android:background="@drawable/bg_icons"
+                android:src="@drawable/times"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:tint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/openLive"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#FF58A3"
+                app:cornerRadius="50dp"
+                android:text="Open Live"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="20dp"
+                android:fontFamily="@font/sen_semibold" />
+
+            <ImageView
+                android:id="@+id/like"
+                android:padding="20dp"
+                android:background="@drawable/bg_icons"
+                android:src="@drawable/like"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
